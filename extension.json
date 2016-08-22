@@ -1,0 +1,69 @@
+{
+	"name": "OfflineExtension",
+	"version": "0.1.0",
+	"author": [
+		"Srijan Agarwal"
+	],
+	"url": "https://github.com/Srijancse/GSoC-Project---Offline-Extension",
+	"descriptionmsg": "OfflineExtension-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses":{
+        "OfflineExtension":"OfflineExtension.php",
+        "OfflineExtensionHooks":"OfflineExtension.hooks.php",
+        "SpecialOfflineExtension":"specials/SpecialOfflineExtension.php"
+    },
+		"MessagesDirs":{
+			"OfflineExtension":[
+					"i18n"
+			]
+	},
+	"ExtensionMessagesFiles": {
+			"OfflineExtensionAlias": "OfflineExtension.i18n.alias.php"
+	},
+	"ResourceFileModulePaths": {
+        "localBasePath": "",
+				"remoteExtPath": "OfflineExtension"
+			},
+
+	"config": {
+		"OfflineExtensionEnableFoo": true
+	},
+	"ExtensionMessagesFiles": {
+		"OfflineExtensionAlias": "OfflineExtension.i18n.alias.php"
+	},
+	"Hooks": {
+		"BeforePageDisplay": [
+			"OfflineExtensionHooks::onBeforePageDisplay"
+		]
+	},
+	"MessagesDirs": {
+		"OfflineExtension": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.OfflineExtension": {
+			"position": "top",
+			"scripts":[
+				"modules/OfflineExtension.js",
+				"modules/OfflineExtension.wiki.js",
+				"modules/wiky.js",
+				"modules/wiky.lang.js",
+				"modules/wiky.math.js"
+			],
+			"styles": [
+				"modules/OfflineExtension.indicator.css",
+				"modules/OfflineExtension.english.css",
+				"modules/OfflineExtension.theme.css",
+				"modules/wiky.css",
+				"modules/wiky.lang.css",
+				"modules/wiky.math.css"
+
+			],
+			"messages": [],
+			"dependencies": []
+		}
+	},
+	"manifest_version": 1
+}
